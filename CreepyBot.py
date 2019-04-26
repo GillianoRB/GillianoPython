@@ -10,7 +10,6 @@ client = commands.Bot(command_prefix = "$")
 @client.event
 async def on_ready():
     print("Thank you for turning me up master!")
-    await client.change_presence(game=discord.Game(name="The prefix is $"))
 
 @client.event
 async def on_message(message):
