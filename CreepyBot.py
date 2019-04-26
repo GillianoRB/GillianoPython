@@ -7,9 +7,14 @@ import os
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "$")
+
 @bot.event
 async def on_ready():
-    print("Thank you for turning me up master!")
+    print("Thank you for turning me up!")
+    await bot.change_presence(game=discord.Game(name='Currently on ' + str(len(bot.servers)) +
+                                                ' servers', type=2))
+
+
 
 @bot.event
 async def on_message(message):
