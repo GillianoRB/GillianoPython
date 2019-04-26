@@ -12,7 +12,6 @@ uptime = datetime.datetime.utcnow()
 Client = discord.Client()
 bot = commands.Bot(command_prefix='$')
 bot.remove_command('help')
-lines = open(r'creepybot.txt').read().splitlines()
 
 owner = ["244169411026485259"]
 
