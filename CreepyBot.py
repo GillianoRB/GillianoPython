@@ -11,7 +11,7 @@ client = commands.Bot(command_prefix = "$")
 @client.event
 async def on_ready():
     print("Thank you for turning me up!")
-    await bot.change_presence(game=discord.Game(name='Currently on ' + str(len(bot.servers)) +
+    await client.change_presence(game=discord.Game(name='Currently on ' + str(len(bot.servers)) +
                                                 ' servers', type=2))
 
 
