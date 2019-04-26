@@ -639,4 +639,4 @@ async def TestBan(ctx):
 
 
 
-bot.run(BOT_TOKEN)
+bot.run(process.env.BOT_TOKEN)
