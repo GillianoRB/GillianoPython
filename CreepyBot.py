@@ -6,6 +6,7 @@ from discord.ext.commands import Bot
 from discord.utils import get
 import random
 import asyncio
+import os
 import time
 
 uptime = datetime.datetime.utcnow()
@@ -26,7 +27,7 @@ async def on_ready():
     
 
 @bot.command(pass_context = True)
-@commands.has_any_role('staff')
+@commands.has_any_role('Staff')
 async def ban(member: discord.Member, days: int = 1000):
     await bot.ban(member, days)
 
@@ -61,13 +62,6 @@ async def setgame(ctx, *, game):
     else:
         await bot.send_cmd_help(ctx)
 
-@bot.command(pass_context = True)
-@commands.has_any_role('Special Role')
-async def leave(ctx):
-    await bot.send_message(ctx.message.author, "to invite me back copy this link (https://discordapp.com/api/oauth2/authorize?client_id=467728819835371540&permissions=0&scope=bot)")
-    await asyncio.sleep(2)
-    toleave = bot.get_server(ctx.message.server.id)
-    await bot.leave_server(toleave)
 
 @bot.command(pass_context = True)
 async def bans(ctx):
