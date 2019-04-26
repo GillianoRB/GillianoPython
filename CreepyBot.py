@@ -1,5 +1,5 @@
 import discord
-from discord.ext.commands import commands
+from discord.ext.commands import bot
 from discord.ext import commands
 import asyncio
 import time
