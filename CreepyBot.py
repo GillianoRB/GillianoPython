@@ -7,18 +7,18 @@ import os
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "$")
-@client.event
+@bot.event
 async def on_ready():
     print("Thank you for turning me up master!")
 
-@client.event
+@bot.event
 async def on_message(message):
     if message.content.startswith("hello"):
         msg = "Hello! (0.author.mention) How are you doing today?".format(message)
-        await client.send_message(message.channel, msg)
+        await bot.send_message(message.channel, msg)
     if message.content.startswith("bye"):
         msg = "Bye! (0.author.mention) i will see you later! (i hope)".format(message)
-        await client.send_message(message.channel, msg)
+        await bot.send_message(message.channel, msg)
 
-client.run(os.getenv("BOT_TOKEN"))
+bot.run(os.getenv("BOT_TOKEN"))
     
